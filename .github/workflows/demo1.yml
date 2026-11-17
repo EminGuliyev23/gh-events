@@ -3,7 +3,12 @@ on:
   pull_request:
     types:
       - opened
-  workflow_dispatch:    
+    branches:
+        - master 
+  workflow_dispatch:
+  push:
+    branches:
+      - master    
 jobs:
   deploy:
     runs-on: ubuntu-latest
